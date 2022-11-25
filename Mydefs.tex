@@ -1,0 +1,762 @@
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}%[section]
+\newtheorem*{thmn}{Theorem}
+\newtheorem*{conj}{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{postn}{Postulate}
+\newtheorem{const}{Construction}
+\newtheorem*{quesn}{Question}
+\newtheorem*{quesns}{Questions}
+\newtheorem*{prob}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{hyp}[thm]{Hypothesis}
+\newtheorem{ques}[thm]{Question}
+
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newtheorem*{remn}{Remark}
+\newtheorem{rrule}[thm]{Rule}
+\newtheorem*{rrulen}{Rule}
+\newtheorem*{notn}{Note}
+
+
+
+
+
+
+
+%%%%%%%%%%
+% blue box with title bold and in-line
+%%%%%%%%%%
+
+
+%\newenvironment{bluebox}[1][]{%
+%\begin{mdframed}[%
+%	skipabove=\baselineskip plus 2pt minus 1pt,
+%    skipbelow=\baselineskip plus 2pt minus 1pt,
+%innertopmargin=4pt,
+%innerleftmargin=4pt,
+%innerrightmargin=4pt,
+%linewidth=0.0pt,
+%linecolor=blue!15,
+%backgroundcolor=blue!15,
+%userdefinedwidth=10.5cm,
+%align=center,
+%roundcorner=4pt
+%]\noindent\textbf{#1}\qquad%
+%}{%
+%    \end{mdframed}
+%}
+%
+%
+%
+%%%%%%%%%%%
+%% blue box with title bold and separate line
+%%%%%%%%%%%
+%
+%
+%\newenvironment{titlebox}[1][]{%
+%    \begin{mdframed}[%
+%        frametitle={\large #1},
+%        skipabove=\baselineskip plus 2pt minus 1pt,
+%        skipbelow=\baselineskip plus 2pt minus 1pt,
+%        linewidth=0.5pt,
+%linecolor=blue!15,
+%        frametitlebackgroundcolor=blue!15,
+%backgroundcolor=blue!15,
+%userdefinedwidth=10.5cm,
+%align=center,
+%roundcorner=4pt
+%    ]%
+%}{%
+%    \end{mdframed}
+%}
+
+
+%%%%%%%%%%
+% wide blue box with title bold and separate line
+%%%%%%%%%%
+
+
+%\newenvironment{widetitlebox}[1][]{%
+%    \begin{mdframed}[%
+%        frametitle={\large #1},
+%        skipabove=\baselineskip plus 2pt minus 1pt,
+%        skipbelow=\baselineskip plus 2pt minus 1pt,
+%        linewidth=0.5pt,
+%linecolor=blue!15,
+%        frametitlebackgroundcolor=blue!15,
+%backgroundcolor=blue!15,
+%userdefinedwidth=14.5cm,
+%align=center,
+%roundcorner=4pt
+%    ]%
+%}{%
+%    \end{mdframed}
+%}
+%
+%
+%%%%%%%%%%%
+%% Exercises Heading
+%%%%%%%%%%%
+%
+%\newcommand{\exercises}{{\color{halfgray}\exertitle \noindent Exercises\,\,}{\exercs\color{halfgray}\arabic{chapter}.\arabic{section}} {\color{blue!15}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill
+%\vspace{3mm}} }
+%
+%%%%%%%%%%%
+%% fancy example style
+%%%%%%%%%%%
+%
+%
+%\theoremstyle{definition}
+%\newtheorem{exinn}{Example}[chapter]
+%\newenvironment{example}
+%  {\clubpenalty=10000
+%   \begin{exinn}%
+%   \mbox{}%
+%   {\color{blue!15}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill}%
+%   \mbox{}\linebreak\ignorespaces}
+%  {\par\kern2ex\color{blue!15}\hrule\end{exinn}}
+%
+%
+
+%%%%%%%%%%
+% On-Your-Own example 
+%%%%%%%%%%
+%
+%\newtheoremstyle{noperiod}% name
+%  {}%      Space above
+%  {}%      Space below
+%  {}%         Body font
+%  {}%         Indent amount (empty = no indent, \parindent = para indent)
+%  {\bfseries}% Thm head font
+%  {}%        Punctuation after thm head
+%  {.5em}%     Space after thm head: " " = normal interword space;
+%        %       \newline = linebreak
+%  {}%         Thm head spec (can be left empty, meaning `normal')
+%
+%\theoremstyle{noperiod}
+%\newtheorem*{noperiod}{On Your Own \ldots}
+%\newenvironment{oyoe}
+%  {\clubpenalty=10000
+%   \begin{noperiod}%
+%   \mbox{}%
+%   {\color{blue!15}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill}%
+%   \mbox{}\linebreak\ignorespaces}
+%  {\par\kern2ex\color{blue!15}\hrule\end{noperiod}}
+
+
+%%%%%%%%%%
+% Custom commands
+%%%%%%%%%%
+
+
+
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\ip}[1]{\left\langle#1\right\rangle}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\divides}{|}
+\newcommand{\notdivides}{\!\!\not\divides \,}
+
+% Standard sets
+
+\newcommand{\Real}{\mathbb R}
+\newcommand{\Int}{\mathbb Z}
+\newcommand{\Nat}{\mathbb N}
+\newcommand{\Rat}{\mathbb Q}
+\newcommand{\Com}{\mathbb C}
+
+
+
+
+\newcommand{\am}{_A\underline{\mbox{Mod}}}
+\newcommand{\bm}{_B\underline{\mbox{Mod}}}
+\newcommand{\bmo}{_{B^\circ}\underline{\mbox{Mod}}}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\bds}{\begin{doublespace}}
+\newcommand{\eds}{\end{doublespace}}
+\newcommand{\mca}{\mathcal{A}}
+\newcommand{\mcb}{\mathcal{B}}
+\newcommand{\mcc}{\mathcal{C}}
+\renewcommand{\phi}{\varphi}
+
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\da}[1]{(dx_{#1})_a}
+\newcommand{\di}{\partial_i}
+\renewcommand{\dj}{\partial_j}
+\newcommand{\xTo}[1]{\xrightarrow{#1}}
+\newcommand{\xMapsto}[1]{\xmapsto{#1}}
+\newcommand{\dk}{\partial_k}
+\newcommand{\bdy}{\partial}
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\pstr}[1]{{\bf p}[#1]}
+\newcommand{\psp}{\bf{p}}
+\newcommand{\Aut}{\mathbb{A}}
+\newcommand{\plo}{p\mathcal{L}}
+\newcommand{\pls}{p\mathbb{S}}
+\newcommand{\ls}{\mathbb{S}}
+\newcommand{\cat}[1]{\textbf{\mbox{#1}}}
+
+% high-light text, lists
+
+%\newcommand{\hl}[1]{\colorbox{blue!15}{#1}}
+
+
+
+
+
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bal}{\begin{enumerate}[label=\textbf{\alph*.}]}
+\newcommand{\eal}{\end{enumerate}}
+
+\newcommand{\bexer}{\begin{enumerate}[label=\textbf{\large\arabic*.}\,\,]\itemsep=5mm}
+\newcommand{\eexer}{\end{enumerate}}
+
+\newcommand{\btc}{\begin{multicols}{2}}
+\newcommand{\etc}{\end{multicols}}
+
+\newcommand{\bmc}[1]{\begin{multicols}{#1}}
+
+\newcommand{\dirns}[1]{\noindent \emph{#1}}
+
+% Calculus
+
+\newcommand{\deriv}[2]{\frac{\partial#1}{\partial x_#2}}
+\newcommand{\vd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\ddx}[1]{\frac{\partial#1}{\partial x}}
+\newcommand{\ddy}[1]{\frac{\partial#1}{\partial y}}
+\newcommand{\ddt}[1]{\frac{d#1}{dt}}
+
+\newcommand{\Q}[1]{Q_{#1}^{(r)}}
+\newcommand{\F}[1]{F_{#1}S\mathbb{A}_{r}}
+\newcommand{\Out}{Out(F_n)}
+
+
+% Canonical basis for R^3
+
+\newcommand{\ivect}{\hat{\imath}}
+\newcommand{\jvect}{\hat{\jmath}}
+\newcommand{\kvect}{\hat{k}}
+
+
+
+% Geometry
+
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\newcommand{\geoline}[1]{\overleftrightarrow{#1}}
+\newcommand{\lineseg}[1]{\overline{#1}}
+\newcommand{\arc}[1]{\wideparen{#1}}
+
+
+
+%%%%%
+%%  Number line tricks in tikz.  From User "Altermundus" at tex.se
+%%%%%
+
+%%%%%%%%%
+%%%%%%%%%       Uncomment this for color version
+%%%%%%%%%
+%\newcommand{\mynumberline}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[<->] (#1-1,0)--(#2+1,0);
+%\foreach \x in {\number\numexpr#1\relax,...,\number\numexpr#2\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%
+%\pgfmathsetmacro{\End}{#2-1} 
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to (\i+1,0)
+%} ; 
+%\end{tikzpicture}}
+%
+%\newcommand{\mynumberray}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[->] (#1,0)--(#2+1,0);
+%\foreach \x in {\number\numexpr#1\relax,...,\number\numexpr#2\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%
+%\pgfmathsetmacro{\End}{#2-1} 
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to (\i+1,0)
+%} ; 
+%\end{tikzpicture}}
+%
+%\newcommand{\mynumberlinewithpoint}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[<->] (#1-1,0)--(#2+1,0);
+%\foreach \x in {#3}
+%\fill [color=black] (\x,0) circle (2.25pt);
+%\foreach \x in {\number\numexpr#1\relax,...,\number\numexpr#2\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%
+%\pgfmathsetmacro{\End}{#2-1} 
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to (\i+1,0)
+%} ; 
+%\end{tikzpicture}}
+%
+%
+%
+%
+%
+%
+%\newcommand{\mysquarecoordplane}[2]{%
+%\begin{tikzpicture}[scale=.5, out=45,in=135,relative,>=stealth]
+%\draw[<->] (#1-1,0)--(#2+1,0);
+%\foreach \x in {\number\numexpr#1\relax,...,-1}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\tiny $\x$};
+%
+%\foreach \x in {1,...,\number\numexpr#2\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\tiny $\x$};
+%
+%\pgfmathsetmacro{\End}{#2-1} 
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to (\i+1,0)
+%} ; 
+%
+%\draw[<->] (0,#1-1)--(0,#2+1);
+%\foreach \x in {\number\numexpr#1\relax,...,-1}  
+%\draw[shift={(0,\x)},color=black] (2pt,0pt) -- (-2pt,0pt) node[right] {\tiny $\x$};
+%\foreach \x in {1,...,\number\numexpr#2\relax}  
+%\draw[shift={(0,\x)},color=black] (2pt,0pt) -- (-2pt,0pt) node[right] {\tiny $\x$};
+%\pgfmathsetmacro{\End}{#2-1} 
+% \foreach \i in {#1,...,\End}{%
+%    (0,\i) to (0,\i+1)
+%} ;
+%
+%\end{tikzpicture}}
+%
+%
+%
+%
+%
+%
+%\newcommand{\addsubnumlinetoright}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[<->] (#1-2,0)--(#2+2,0);
+%\foreach \x in {\number\numexpr#1-1\relax,...,\number\numexpr#2+1\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%\fill (#1,0) circle (2pt);
+%\fill (#2,0) circle (2pt);
+%
+%\pgfmathsetmacro{\End}{#2-1} 
+% \draw[#3,shorten >=2pt]
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to (\i+1,0)
+%} ; 
+%\node[color=Red] at (#2,-0.75) {\small End};
+%\node[color=Green] at (#1,-0.75) {\small Start};
+% \pgfmathsetmacro{\xtxt}{(#1+#2)/2}
+%\node at (\xtxt,0.5) {\small Hop \number\numexpr#2-#1\relax\ units to the \emph{right}};
+%\end{tikzpicture}}
+%
+%
+%
+%
+%\newcommand{\symmnumbline}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[<->] (#1-2,0)--(#2+2,0);
+%\foreach \x in {\number\numexpr#1-1\relax,...,\number\numexpr#2+1\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%%\fill (#1,0) circle (2pt);
+%%\fill (#2,0) circle (2pt);
+%
+%\pgfmathsetmacro{\Start}{#1-1} 
+% \draw[#3,shorten >=2pt]
+% \foreach \i in {\Start,...,-1}{%
+%    (\i,0) to (-\i,0)
+%} ; 
+%
+%\end{tikzpicture}}
+%
+%
+%
+%\newcommand{\disttozeronl}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[<->] (-3,0)--(3,0);
+%\foreach \x in {\number\numexpr-3\relax,...,\number\numexpr3\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%%\fill (1,0) circle (2pt);
+%\fill (0,0) circle (2pt);
+%
+%\pgfmathsetmacro{\End}{#1+#2-1} 
+% \draw[#3,shorten >=0pt]
+% \foreach \i in {1}{%
+%    (\i-1,0) to (\i,0)
+%} ; 
+%\end{tikzpicture}}
+%
+%
+%\newcommand{\myaddsubnumlinetoright}[3]{%
+%\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+%\draw[<->] (#1-2,0)--(#1+#2+2,0);
+%\foreach \x in {\number\numexpr#1-1\relax,...,\number\numexpr#1+#2+1\relax}  
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%\fill (#1,0) circle (2pt);
+%\fill (#1+#2,0) circle (2pt);
+%
+%\pgfmathsetmacro{\End}{#1+#2-1} 
+% \draw[#3,shorten >=2pt]
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to (\i+1,0)
+%} ; 
+%\node[color=Red] at (#1+#2,-0.75) {\small End};
+%\node[color=Green] at (#1,-0.75) {\small Start};
+% \pgfmathsetmacro{\xtxt}{(#1+#1+#2)/2}
+%\node at (\xtxt,0.5) {\small Hop \number\numexpr#2\relax\ units to the \emph{right}};
+%\end{tikzpicture}}
+%
+%
+%\newcommand{\addsubnumlinetoleft}[3]{%
+%\begin{tikzpicture}[out=135,in=45,>=stealth]
+%\draw[<->] (#2-2,0)--(#1+2,0);
+%\foreach \x in {\number\numexpr#2-1\relax,...,\number\numexpr#1+1\relax}
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%\fill (#1,0) circle (2pt);
+%\fill (#2,0) circle (2pt);
+%
+%\pgfmathsetmacro{\End}{#2+1} 
+% \draw[#3,shorten >=2pt]
+% \foreach \i in {#1,...,\End}{%
+%    (\i,0) to  (\i-1,0)
+%} ; 
+%\node[color=Red] at (#2,-0.75) {\small End };
+%\node[color=Green] at (#1,-0.75) {\small Start };
+% \pgfmathsetmacro{\xtxt}{(#1+#2)/2}     
+%\node at (\xtxt,0.5) {\small Hop \number\numexpr-#2+#1\relax\ units to the \emph{left}};
+%\end{tikzpicture}} 
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%   Grayscale versions of highlight, boxes, examples, etc.          %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% grayscale highlight
+
+\newcommand{\hl}[1]{\colorbox{gray!40}{#1}}
+
+
+
+
+\newcommand{\mynumberline}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[<->] (#1-1,0)--(#2+1,0);
+\foreach \x in {\number\numexpr#1\relax,...,\number\numexpr#2\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+
+\pgfmathsetmacro{\End}{#2-1} 
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to (\i+1,0)
+} ; 
+\end{tikzpicture}}
+
+\newcommand{\mynumberray}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[->] (#1,0)--(#2+1,0);
+\foreach \x in {\number\numexpr#1\relax,...,\number\numexpr#2\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+
+\pgfmathsetmacro{\End}{#2-1} 
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to (\i+1,0)
+} ; 
+\end{tikzpicture}}
+
+\newcommand{\mynumberlinewithpoint}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[<->] (#1-1,0)--(#2+1,0);
+\foreach \x in {#3}
+\fill [color=black] (\x,0) circle (2.25pt);
+\foreach \x in {\number\numexpr#1\relax,...,\number\numexpr#2\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+
+\pgfmathsetmacro{\End}{#2-1} 
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to (\i+1,0)
+} ; 
+\end{tikzpicture}}
+
+
+
+
+
+
+\newcommand{\mysquarecoordplane}[2]{%
+\begin{tikzpicture}[scale=.5, out=45,in=135,relative,>=stealth]
+\draw[<->] (#1-1,0)--(#2+1,0);
+\foreach \x in {\number\numexpr#1\relax,...,-1}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\tiny $\x$};
+
+\foreach \x in {1,...,\number\numexpr#2\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\tiny $\x$};
+
+\pgfmathsetmacro{\End}{#2-1} 
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to (\i+1,0)
+} ; 
+
+\draw[<->] (0,#1-1)--(0,#2+1);
+\foreach \x in {\number\numexpr#1\relax,...,-1}  
+\draw[shift={(0,\x)},color=black] (2pt,0pt) -- (-2pt,0pt) node[right] {\tiny $\x$};
+\foreach \x in {1,...,\number\numexpr#2\relax}  
+\draw[shift={(0,\x)},color=black] (2pt,0pt) -- (-2pt,0pt) node[right] {\tiny $\x$};
+\pgfmathsetmacro{\End}{#2-1} 
+ \foreach \i in {#1,...,\End}{%
+    (0,\i) to (0,\i+1)
+} ;
+
+\end{tikzpicture}}
+
+
+
+
+
+
+\newcommand{\addsubnumlinetoright}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[<->] (#1-2,0)--(#2+2,0);
+\foreach \x in {\number\numexpr#1-1\relax,...,\number\numexpr#2+1\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\fill (#1,0) circle (2pt);
+\fill (#2,0) circle (2pt);
+
+\pgfmathsetmacro{\End}{#2-1} 
+ \draw[#3,shorten >=2pt,color=black]
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to (\i+1,0)
+} ; 
+\node[color=black] at (#2,-0.75) {\small End};
+\node[color=black] at (#1,-0.75) {\small Start};
+ \pgfmathsetmacro{\xtxt}{(#1+#2)/2}
+\node at (\xtxt,0.5) {\small Hop \number\numexpr#2-#1\relax\ units to the \emph{right}};
+\end{tikzpicture}}
+
+
+
+
+\newcommand{\symmnumbline}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[<->] (#1-2,0)--(#2+2,0);
+\foreach \x in {\number\numexpr#1-1\relax,...,\number\numexpr#2+1\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%\fill (#1,0) circle (2pt);
+%\fill (#2,0) circle (2pt);
+
+\pgfmathsetmacro{\Start}{#1-1} 
+ \draw[#3,shorten >=2pt,color=black]
+ \foreach \i in {\Start,...,-1}{%
+    (\i,0) to (-\i,0)
+} ; 
+
+\end{tikzpicture}}
+
+
+
+\newcommand{\disttozeronl}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[<->] (-3,0)--(3,0);
+\foreach \x in {\number\numexpr-3\relax,...,\number\numexpr3\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%\fill (1,0) circle (2pt);
+%\fill (0,0) circle (2pt);
+
+\pgfmathsetmacro{\End}{#1+#2-1} 
+ \draw[#3,shorten >=0pt,color=black]
+ \foreach \i in {1}{%
+    (\i-1,0) to (\i,0)
+} ; 
+\end{tikzpicture}}
+
+
+\newcommand{\myaddsubnumlinetoright}[3]{%
+\begin{tikzpicture}[out=45,in=135,relative,>=stealth]
+\draw[<->] (#1-2,0)--(#1+#2+2,0);
+\foreach \x in {\number\numexpr#1-1\relax,...,\number\numexpr#1+#2+1\relax}  
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\fill (#1,0) circle (2pt);
+\fill (#1+#2,0) circle (2pt);
+
+\pgfmathsetmacro{\End}{#1+#2-1} 
+ \draw[#3,shorten >=2pt,color=black]
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to (\i+1,0)
+} ; 
+\node[color=black] at (#1+#2,-0.75) {\small End};
+\node[color=black] at (#1,-0.75) {\small Start};
+ \pgfmathsetmacro{\xtxt}{(#1+#1+#2)/2}
+\node at (\xtxt,0.5) {\small Hop  \number\numexpr#2\relax\ units to the \emph{right}};
+\end{tikzpicture}}
+
+
+\newcommand{\addsubnumlinetoleft}[3]{%
+\begin{tikzpicture}[out=135,in=45,>=stealth]
+\draw[<->] (#2-2,0)--(#1+2,0);
+\foreach \x in {\number\numexpr#2-1\relax,...,\number\numexpr#1+1\relax}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\fill (#1,0) circle (2pt);
+\fill (#2,0) circle (2pt);
+
+\pgfmathsetmacro{\End}{#2+1} 
+ \draw[#3,shorten >=2pt,color=black]
+ \foreach \i in {#1,...,\End}{%
+    (\i,0) to  (\i-1,0)
+} ; 
+\node[color=black] at (#2,-0.75) {\small End };
+\node[color=black] at (#1,-0.75) {\small Start };
+ \pgfmathsetmacro{\xtxt}{(#1+#2)/2}     
+\node at (\xtxt,0.5) {\small Hop \number\numexpr-#2+#1\relax\ units to the \emph{left}};
+\end{tikzpicture}} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%
+% blue box with title bold and in-line
+%%%%%%%%%%
+
+
+\newenvironment{bluebox}[1][]{%
+\begin{mdframed}[%
+	skipabove=\baselineskip plus 2pt minus 1pt,
+    skipbelow=\baselineskip plus 2pt minus 1pt,
+innertopmargin=4pt,
+innerleftmargin=4pt,
+innerrightmargin=4pt,
+linewidth=0.0pt,
+linecolor=halfgray,
+backgroundcolor=halfgray,
+userdefinedwidth=10.5cm,
+align=center,
+roundcorner=4pt
+]\noindent\textbf{#1}\qquad%
+}{%
+    \end{mdframed}
+}
+
+
+
+%%%%%%%%%%
+% blue box with title bold and separate line
+%%%%%%%%%%
+
+
+\newenvironment{titlebox}[1][]{%
+    \begin{mdframed}[%
+        frametitle={\large #1},
+        skipabove=\baselineskip plus 2pt minus 1pt,
+        skipbelow=\baselineskip plus 2pt minus 1pt,
+        linewidth=0.5pt,
+linecolor=halfgray,
+        frametitlebackgroundcolor=halfgray,
+backgroundcolor=halfgray,
+userdefinedwidth=10.5cm,
+align=center,
+roundcorner=4pt
+    ]%
+}{%
+    \end{mdframed}
+}
+
+
+%%%%%%%%%%
+% wide blue box with title bold and separate line
+%%%%%%%%%%
+
+
+\newenvironment{widetitlebox}[1][]{%
+    \begin{mdframed}[%
+        frametitle={\large #1},
+        skipabove=\baselineskip plus 2pt minus 1pt,
+        skipbelow=\baselineskip plus 2pt minus 1pt,
+        linewidth=0.5pt,
+linecolor=halfgray,
+        frametitlebackgroundcolor=halfgray,
+backgroundcolor=halfgray,
+userdefinedwidth=14.5cm,
+align=center,
+roundcorner=4pt
+    ]%
+}{%
+    \end{mdframed}
+}
+
+
+%%%%%%%%%%
+% Exercises Heading
+%%%%%%%%%%
+
+\newcommand{\exercises}{\newpage{\color{halfgray}\exertitle \noindent Exercises\,\,}{\exercs\color{halfgray}\arabic{chapter}.\arabic{section}} {\color{halfgray}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill
+\vspace{3mm}} }
+
+%%%%%%%%%%
+% fancy example style
+%%%%%%%%%%
+
+
+\theoremstyle{definition}
+\newtheorem{exinn}{Example}[section]
+\newenvironment{example}
+  {\clubpenalty=10000
+   \begin{exinn}%
+   \mbox{}%
+   {\color{halfgray}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill}%
+   \mbox{}\linebreak\ignorespaces}
+  {\par\kern2ex\color{halfgray}\hrule\end{exinn}}
+
+
+
+%%%%%%%%%%
+% On-Your-Own example 
+%%%%%%%%%%
+
+\newtheoremstyle{noperiod}% name
+  {.5cm}%      Space above
+  {.5cm}%      Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%         Thm head spec (can be left empty, meaning `normal')
+
+\theoremstyle{noperiod}
+\newtheorem*{noperiod}{On Your Own \ldots}
+\newenvironment{oyoe}
+  {\clubpenalty=10000
+   \begin{noperiod}%
+   \mbox{}%
+   {\color{halfgray}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill}%
+   \mbox{}\linebreak\ignorespaces}
+  {\par\kern2ex\color{halfgray}\hrule\end{noperiod}}

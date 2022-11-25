@@ -1,0 +1,218 @@
+\documentclass[10pt, paper=8.5in:11in,pagesize=auto,openright,titlepage,cleardoublepage=empty, headinclude,twoside]{scrbook}
+
+%\areaset[0mm]{5.5in}{9in} 
+%  Syntax: \areaset[binding_correction]{textwidth}{textheight}
+
+\usepackage{subfig}
+
+\usepackage[eulerchapternumbers,
+subfig,
+beramono,
+pdfspacing
+,dottedtoc
+]{classicthesis}
+
+%altermundos tkz-euclide
+
+% use axiom
+% M123 book
+
+\usepackage{arsclassica}
+\usepackage{xfrac}
+
+\areaset[5mm]{5.5in}{9in} 
+\usepackage{verbatim}
+\usepackage{varioref}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{chngpage}
+\usepackage{amsmath,amssymb} 
+\usepackage{amsthm,latexsym}   
+\usepackage{harpoon}
+%\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{textcomp}
+\usepackage{makeidx}
+%\usepackage{heiroglf}
+%\usepackage[dvipsnames]{color}
+\usepackage{rotating}
+\usepackage{multirow}
+
+% tikz settings
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{positioning,shadows,backgrounds}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\tikzset{
+  big arrow/.style={
+    decoration={markings,
+    mark=at position 0.01 with {\arrow[scale=2, #1]{<}};,
+    mark=at position 1 with {\arrow[scale=2, #1]{>}}
+    },
+       postaction={decorate},
+    shorten >=0.4pt},
+  big arrow/.default=black}
+
+
+\usepackage{xcolor}
+\definecolor{shadecolor}{rgb}{0.75,0.75,0.75}
+\usepackage{color}
+
+\usepackage{enumitem}
+\usepackage[framemethod=TikZ]{mdframed}
+
+
+\usepackage{multicol}
+\usepackage{multirow,colortbl}
+
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+%\renewcommand*{\chapterpagestyle}{empty}
+
+\newcommand{\HUGE}{\fontsize{45}{50}\selectfont}
+\newcommand{\exercs}{\fontsize{30}{40}\selectfont}
+\newcommand{\exertitle}{\fontsize{20}{40}\selectfont}
+
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+
+%\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+
+\automark[section]{chapter}
+\input{Mydefs}
+
+
+
+
+\let\orgtheindex\theindex
+\let\orgendtheindex\endtheindex
+\def\theindex{%
+	\def\twocolumn{\begin{multicols}{2}}%
+	\def\onecolumn{}%
+	\clearpage
+	\orgtheindex
+}
+\def\endtheindex{%
+	\end{multicols}%
+	\orgendtheindex
+}
+
+\makeindex
+
+\DeclareRobustCommand*{\arsclassica}{{\normalfont\sffamily ArsClassica}}
+\DeclareRobustCommand*{\texlive}{\TeX{}~Live%
+\index{texlive@\protect\TeX{}~Live}}
+
+
+
+
+\newcommand{\myTitle}{Curriculum Guide}
+\newcommand{\mySubTitle}{2022-2023 Edition}
+\newcommand{\myLocation}{Indian Springs School}
+%\newcommand{\myGroup}{Italian \TeX{} and \LaTeX{} User Group}
+%\newcommand{\myUrl}{\url{http://www.guitex.org/}}
+%\newcommand{\myTime}{2012, February}
+
+\font\manual=manfnt
+\def\dbend{{\manual\char127}} % dangerous bend sign
+
+% ----------------------------------------------------------------
+\begin{document}
+
+\pagenumbering{roman}
+\pagestyle{plain}
+
+
+
+
+
+
+%******************************************************************
+% Frontmatter
+%******************************************************************
+
+\frontmatter
+\input{TitlePage}
+%\input{FrontBackMatter/Titleback}
+%\clearpage
+%\input{FrontBackMatter/Abstract+Sommario}
+%\input{FrontBackMatter/Acknowledgements}
+\pagestyle{scrheadings} 
+%\clearpage
+\tableofcontents 
+%\input{FrontBackMatter/Contents}
+%\cleardoublepage
+
+
+%******************************************************************
+% Mainmatter
+%******************************************************************
+
+\mainmatter
+\pagenumbering{arabic}
+
+
+\input{Chapters/Intro/Chap00}
+
+
+
+
+\input{Chapters/Arts/Chap01}
+\input{Chapters/Arts/Sect1}
+\input{Chapters/Arts/Sect2}
+
+
+
+
+\input{Chapters/CS/Chap02}
+\input{Chapters/CS/Sect1}
+\input{Chapters/CS/Sect2}
+
+\input{Chapters/English/Chap03}
+\input{Chapters/English/Sect1}
+\input{Chapters/English/Sect2}
+
+\input{Chapters/History/Chap04}
+\input{Chapters/History/Sect1}
+\input{Chapters/History/Sect2}
+
+\input{Chapters/Languages/Chap05}
+\input{Chapters/Languages/Sect1}
+\input{Chapters/Languages/Sect2}
+
+\input{Chapters/Math/Chap06}
+
+\input{Chapters/Math/Sect1}
+\input{Chapters/Math/VerticalAlignment}
+\input{Chapters/Math/Sect2}
+
+\input{Chapters/PE/Chap07}
+\input{Chapters/PE/Sect1}
+\input{Chapters/PE/Sect2}
+
+\input{Chapters/Science/Chap08}
+\input{Chapters/Science/Sect1}
+\input{Chapters/Science/Sect2}
+
+\input{Chapters/Ind/Chap09}
+
+\input{Chapters/Ind/Sect2}
+
+\input{Chapters/MSON/Chap10}
+
+\input{Chapters/MSON/Sect2}
+
+\input{Appendix}
+
+
+
+
+% *****************************************************************
+% Backmatter
+%******************************************************************
+
+%\printindex
+
+\end{document}
+
